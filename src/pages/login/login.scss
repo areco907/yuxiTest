@@ -1,0 +1,160 @@
+page-login {
+    ion-content {
+		.image-container{
+			display: flex;
+			justify-items: center;
+			padding: 0 50px;
+			img{
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		.both-buttons{
+			display:flex;
+			justify-content: center;
+			margin-top:20px;
+
+			.main-button{
+				@include generic-main-button(40%); 
+			}
+	
+			.secondary-button{
+				@include generic-secondary-button(40%); 
+			}
+		}
+		
+		
+		&.ng-dirty.ng-invalid {
+			.item-input  {
+			  ion-input {
+				border: 1px solid red;
+			  }
+			  .label {
+				color: red;
+			  }
+			}
+		  }
+		  
+		  /*
+		  * Sobreescribir Hoshi-input Ionic 
+		  */
+		  .item-input {
+			line-height: 1.2rem;
+			font-size: 1.4rem;
+			padding-left: 0;
+			min-height: 70px;
+		
+			ion-input {
+			  max-height: 44px;
+			  border: 1px solid rgba(gray,0.3);
+			  border-radius: 2em;
+			  padding: 0.7em 1.2em 0.8em 1.5em;
+			  
+			}
+		
+			input {
+			  color: gray;
+			}
+		
+			.text-input {
+			  font-size: 1.6rem;
+			  margin-left: 8px !important;
+			  margin-top:0 !important;
+			}
+		
+			.text-input[disabled]{
+			  opacity: 1;
+			}
+		
+			.label {
+			  margin-left: 1.5em;
+			  margin-top: 0px;
+			  margin-bottom: 6px;
+			  background: white;
+			  color: color($colors, purple_yuxi);
+			  width: max-content;
+			  font-size: 1.6rem;
+			  overflow: visible;
+			  min-width: 230px;
+			}
+		
+			.label[floating] {
+			  -webkit-transform: translate3d(0, 35px, 0);
+			  transform: translate3d(0, 35px, 0);
+			}
+			.item-inner {
+			  box-shadow: none !important;
+			  border-bottom-color: rgba(255, 255, 255, 0) !important;
+			  -webkit-box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0) !important;
+			  padding-right: 0 !important;
+			}
+			
+		  }
+		
+		  .item-input-has-focus, 
+		  .input-has-focus, 
+		  .item-input-has-value,
+		  .input-has-value  {
+			.label[floating] {
+			  -webkit-transform: translate3d(0, 7px, 0) scale(0.9);
+			  transform: translate3d(0, 10px, 0) scale(0.9);
+			  max-width: 100%;
+			  padding-right: 1rem;
+			  padding-left: 1rem;
+			  min-width: 0;
+			  background: white;
+			  z-index: 10;
+			  color: color($colors, purple_yuxi);
+			  font-size: 14px;
+			}
+		  }
+		
+		  .has-custom-icon {
+			ion-input {
+			  padding-left: 3.85em;
+			}
+		
+			.label {
+			  margin-left: 3.85em;
+			  transition: margin-left 0.2s, transform 0.2s;
+			  min-width: 210px;
+			}
+		  }
+		
+		  .has-custom-icon.input-has-focus.item-input-has-focus, 
+		  .has-custom-icon.input-has-value {
+			.label {
+			  margin-left: 1.8em;
+			}
+		  }
+		
+		  .icon-left {
+			color: blue;
+			position: absolute;
+			z-index: 10;
+			font-size: 26px;
+			left: 0.8em;
+			top: 1.07em;
+		  }
+		
+		  .icon-right-aux {
+			position: relative;
+		  }
+		
+		  .icon-container {
+			background: white;
+			border-radius: 2em;
+			padding: 0.3em;
+			position: absolute;
+			z-index: 10;
+			right: 0.8em;
+			top: 1.9em;
+		
+			i {
+			  color: blue;
+			  font-size: 18px;
+			}
+		  }
+    }
+}

@@ -1,0 +1,14 @@
+{
+	"menu": {
+		"tabs": {
+			"yuxiPhoto": {
+				"title": "yuxiPhoto",
+				"source": "md-aperture"
+			},
+			"yuxiList": {
+				"title": "yuxiList",
+				"source": "ios-list"
+			}
+		}
+	}
+}

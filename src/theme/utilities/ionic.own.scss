@@ -1,0 +1,58 @@
+/*
+* Tabs: Menu principal
+*/
+ion-tabs {
+	.tab-button[aria-selected=true] {
+		border-top: 3px solid color($colors, blue_yuxi);
+		color: color($colors, blue_yuxi);
+		.tab-button-text{
+			color: color($colors, blue_yuxi);
+		}
+		
+		
+	}
+	.tab-button-text {
+		color: color($colors, purple_yuxi);
+		font-size: 1.1rem;
+		font-weight: 600;
+	}
+}
+/*
+*	ion-header
+*/
+ion-header {
+  background: white;
+}
+.header{
+	&-md::after,
+	&-ios::after{
+		background-image: none !important;
+	}
+}
+.toolbar{
+	&-md,
+	&-ios{
+		padding: 0 !important;
+	}
+}
+/*
+* botón 'Atrás'
+*/
+.back-button { 
+	font-weight: 600;  
+	position: absolute;
+	top: 71.5%;
+	z-index: 1;
+}
+.no-logo .back-button {
+	top: 30%;
+}
+.back-button-icon {
+	color: color($colors, blue_yuxi);
+	padding: 0 6px;	
+	font-size: 2.4rem;
+}
+.bar-button {
+  font-size: 1.4rem;
+}
+

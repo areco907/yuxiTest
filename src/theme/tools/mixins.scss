@@ -1,0 +1,30 @@
+/*
+* Funciones Heredables
+*/
+@mixin generic-main-button($width) {
+    padding: 1.4em 2em;
+    width: $width;
+    text-transform: none;
+    font-weight: 600;
+    font-size: 16px;
+    background: linear-gradient(to right, color($colors, purple_yuxi) , color($colors, blue_yuxi));
+    border-radius: 64px;
+    box-shadow: none;
+    &.activated {
+      background: linear-gradient(to right, color($colors, purple_yuxi) , color($colors, blue_yuxi));
+    }
+  }
+  @mixin generic-secondary-button($width) {
+    padding: 1.4em 2em;
+    width: $width;
+    text-transform: none;
+    font-weight: 600;
+    font-size: 16px;
+    background: linear-gradient(to right, color($colors, blue_yuxi) , color($colors, purple_yuxi));
+    border-radius: 64px;
+    box-shadow: none;
+    color: white;
+    &.activated {
+      background: linear-gradient(to right, color($colors, blue_yuxi), color($colors, purple_yuxi));
+    }
+  }

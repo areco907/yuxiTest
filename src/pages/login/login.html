@@ -1,0 +1,19 @@
+<ion-content padding>
+  <div class="image-container">
+    <img src="assets/imgs/yuxi.jpeg" alt="">
+  </div>
+  <ion-item>
+    <ion-label floating color="placeholder">Email Address</ion-label>
+    <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating color="placeholder">Password</ion-label>
+    <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+  </ion-item>
+  <div class="both-buttons">
+      <button ion-button class="main-button" (click)="login(user)">Login</button>
+      <button ion-button class="secondary-button" color="light" (click)="goToRegister(user)">Register</button>
+  </div>
+  
+</ion-content>

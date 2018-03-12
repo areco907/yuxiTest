@@ -1,0 +1,19 @@
+page-yuxi-photo {
+    .both-buttons{
+        display:flex;
+        justify-content: center;
+        margin-top:20px;
+
+        ion-icon{
+            margin-right: 10px;
+        }
+
+        .main-button{
+            @include generic-main-button(40%); 
+        }
+
+        .secondary-button{
+            @include generic-secondary-button(40%); 
+        }
+    }
+}

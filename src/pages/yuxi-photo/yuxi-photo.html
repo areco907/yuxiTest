@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons right>
+      <button ion-button (click)="logout()">Logout</button>
+    </ion-buttons>
+    <ion-title>
+      {{messages.title}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="both-buttons">
+    <button ion-button item-left class="main-button" (click)="listPhotos()">
+      <ion-icon name="photos"></ion-icon>
+      {{messages.myPhotosButton}}
+    </button>
+    <button ion-button item-left class="secondary-button" (click)="takePic(user)">
+      <ion-icon name="camera"></ion-icon>
+      {{messages.cameraButton}}
+    </button>
+  </div>
+</ion-content>

@@ -1,0 +1,10 @@
+<ion-header>
+  
+</ion-header>
+<ion-content>
+      <ion-list inset>
+          <button ion-item *ngFor="let data of dataList" (click)="itemSelected(data)">
+              {{data.title | uppercase}}
+          </button>  
+      </ion-list>
+  </ion-content>
