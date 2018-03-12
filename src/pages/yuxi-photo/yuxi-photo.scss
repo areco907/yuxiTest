@@ -9,11 +9,14 @@ page-yuxi-photo {
         }
 
         .main-button{
-            @include generic-main-button(40%); 
+            @include generic-button(80%); 
         }
 
-        .secondary-button{
-            @include generic-secondary-button(40%); 
+        .imageTaken{
+            width: 75%;
+            height: 75%;
+
         }
+
     }
 }

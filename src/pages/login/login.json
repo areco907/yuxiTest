@@ -1,5 +1,9 @@
 {
   "login": {
-    "title":"login"
+    "title":"login",
+    "placeholderEmail": "Email Address",
+    "placeholderPass": "Password",
+    "registered": "Not registered?",
+    "createAccount": "Create account"
   }
 }

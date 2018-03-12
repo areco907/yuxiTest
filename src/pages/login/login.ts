@@ -4,6 +4,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { JsonProvider } from '../../commons/providers/json.provider';
 import { AuthenticationService } from "../../business-model/services/authentication.service";
 import { UserData } from "../../commons/models/userData";
+import { AngularFireAuth } from 'angularfire2/auth';
+import { UtilitiesProvider } from "../../commons/providers/utilities.provider";
 
 @IonicPage()
 @Component({
@@ -19,15 +21,42 @@ export class LoginPage {
 	 */
 	private messages: any;
 
-  constructor(private authenticationService: AuthenticationService, private jsonProvider: JsonProvider, public navCtrl: NavController, public navParams: NavParams) 
+  constructor(private afAuth: AngularFireAuth, 
+    private authenticationService: AuthenticationService, 
+    private jsonProvider: JsonProvider, 
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    private utilitiesProvider: UtilitiesProvider) 
   {
     this.messages = this.jsonProvider.messages.login;
-    console.log(this.messages);
   }
 
-  private login(user: UserData) {
-    this.authenticationService.login(user)
-    .then(() => this.navCtrl.setRoot('MenuTabsPage'))
+  async login(user: UserData) {
+    try {
+      const result = await this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password);
+      if (result) {
+        this.navCtrl.setRoot('MenuTabsPage');
+      }  
+    }
+    catch (e) {
+      switch (e.code) {
+        case "auth/argument-error":
+          this.utilitiesProvider.showToast('fields empty, please complete all before continue. ', 'warningToast')
+          break;
+        
+        case "auth/invalid-email":
+          this.utilitiesProvider.showToast('Invalid email, please insert a valid email. ', 'warningToast')
+          break;
+        
+        case "auth/wrong-password":
+          this.utilitiesProvider.showToast('Wrong password, please insert a valid password. ', 'warningToast')
+          break;
+      
+        default:
+          break;
+      }
+      console.error(e.code);
+    }
   }
 
   private goToRegister(){

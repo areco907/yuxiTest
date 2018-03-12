@@ -17,6 +17,9 @@ ion-tabs {
 		font-weight: 600;
 	}
 }
+.item-md.item-block .item-inner{
+	border-bottom:none !important;
+}
 /*
 *	ion-header
 */
@@ -54,5 +57,48 @@ ion-header {
 }
 .bar-button {
   font-size: 1.4rem;
+}
+
+/*
+* Toast
+*/
+.toas-md .toast-wrapper{
+	width:95%;
+}
+.warningToast{
+	.toast-wrapper{
+		border-radius:5px;
+		width:95% !important;
+		background: rgba(color($colors, danger),0.95) !important;
+		.toast-container{
+			box-shadow: 0 9px 12px 0px rgba(color($colors, danger),0.28);
+			border-radius: 5px;
+			> div{
+				position: relative;
+				padding-left: 4rem;
+				text-align: left;
+				display: flex;
+				align-items: center;
+				margin: 0 auto;
+				padding: 10px 16px 10px 5.5rem;
+				line-height: 1.5;
+				
+				&:before {
+					content: "";
+					left: 1.5rem;
+					position: absolute;
+					width: 30px;
+					height: 30px;
+					margin-right: 10px;
+					background: url(../assets/images/icono_alerta.svg) no-repeat;
+					background-size: cover;
+				}
+			}
+		}
+	}	
+}
+
+ion-toast{
+	margin-top: 10px;
 }
 

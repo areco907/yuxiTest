@@ -1,10 +1,18 @@
 <ion-header>
-  
-</ion-header>
+    <ion-navbar>
+      <ion-buttons right>
+        <button ion-button (click)="logout()">Logout</button>
+      </ion-buttons>
+      <ion-title>
+        {{messages.title}}
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
 <ion-content>
-      <ion-list inset>
-          <button ion-item *ngFor="let data of dataList" (click)="itemSelected(data)">
-              {{data.title | uppercase}}
+      <ion-card inset *ngFor="let data of dataList" (click)="itemSelected(data)">
+          <button ion-item item-right>
+            <ion-icon name="md-add-circle"></ion-icon>  
+            {{data.title | uppercase}}
           </button>  
-      </ion-list>
+      </ion-card>
   </ion-content>

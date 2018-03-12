@@ -1,14 +1,23 @@
 page-detail {
     ion-content {
-		position: absolute;
-		background-image: url(../assets/imgs/yuxi.jpeg);
-		background-size: 20%;
-		background-repeat: no-repeat;
-		background-position: center bottom;
+		background: linear-gradient(to bottom left, #51aca5,#323e70);
         
         ion-card {
             position: relative;
             text-align: center;
+        }
+        h2{
+            text-align: center;
+            color:white;
+            padding:10px 0;
+        }
+        .card-md{
+            width:70%;
+            margin:10px auto;
+            border-radius:5px;
+            -webkit-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.4);
+			-moz-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.4);
+			box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.4);
         }
 
         .card-header-md{
@@ -24,6 +33,13 @@ page-detail {
             font-weight: bold;
             color: #fff;
         }
+
+        .card-content-md{
+            background:white;
+            margin:0 20px;
+            padding-bottom: 50px;
+            border-radius: 5px;
+        }
         
         .card-subtitle {
             font-size: 1.0em;
@@ -31,6 +47,18 @@ page-detail {
             top: 52%;
             width: 100%;
             color: #fff;
+            font-size:1.7em;
+        }
+
+        .body{
+            background: white;
+            margin: 0 30px;
+            border-radius: 5px;
+            padding: 80px 30px 30px 30px;
+            margin-top: -60px;
+            -webkit-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.4);
+			-moz-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.4);
+			box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.4);
         }
     }
 }

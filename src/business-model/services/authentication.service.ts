@@ -10,38 +10,6 @@ export class AuthenticationService {
 
     constructor(private parentCtrl: App, private afAuth: AngularFireAuth, private utilitiesProvider: UtilitiesProvider) { }
 
-	/**
-	 * @description Método que realiza el llamado al procedimiento 
-	 *              para consultar información de oficinas y corresponsales. 
-	 * @method login
-	 */
-    public async login(user) {
-        try {
-            const result = await this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password);
-            if (result) {
-                console.log(result);
-            }
-        }
-        catch (e) {
-            console.error(e);
-        }
-    }
-
-    public async register(user) {
-        try {
-            const result = await this.afAuth.auth.createUserWithEmailAndPassword(
-                user.email,
-                user.password
-            );
-            if (result) {
-                console.log(result);
-                //this.navCtrl.setRoot('HomePage');
-            }
-        } catch (e) {
-            console.error(e);
-        }
-    }
-
     /**
 	 * @description Método que realiza el llamado al procedimiento 
 	 *              para consultar información de oficinas y corresponsales. 

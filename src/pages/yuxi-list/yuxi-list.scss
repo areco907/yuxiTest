@@ -1,9 +1,25 @@
 page-yuxi-list {
     ion-content {
 		position: absolute;
-		background-image: url(../assets/imgs/yuxi.jpeg);
-		background-size: 20%;
+		background-image: url(../assets/imgs/listBkg.jpeg);
+		background-size: 100%;
 		background-repeat: no-repeat;
-        background-position: center bottom;
+		background-position: center bottom;
+		
+		.card-md{
+			border-radius: 30px;
+			color: darkgray;
+			margin: 20px;
+			width: calc(100% - 40px);
+			-webkit-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.4);
+			-moz-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.4);
+			box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.4);
+			.item-md{
+				color:gray;
+				ion-icon{
+					margin-right: 10px;
+				}
+			}
+		}
     }
 }

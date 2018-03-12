@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-buttons right>
-      <button ion-button >Logout</button>
+      <button ion-button (click)="logout()">Logout</button>
     </ion-buttons>
     <ion-title>
       {{messages.title}}
@@ -11,15 +11,15 @@
 
 
 <ion-content padding>
-  <ion-card>
-    <ion-card-header>
+  <h2>
       {{dataSelected.title}}
-    </ion-card-header>
+  </h2>
+  <ion-card>
     <img src="assets/imgs/ohio.jpg" />
     <div class="card-title">{{messages.userId}}{{dataSelected.userId}}</div>
     <div class="card-subtitle">{{messages.id}}{{dataSelected.id}}</div>
   </ion-card>
-  <ion-card-content>
+  <div class="body">
     {{dataSelected.body}}
-  </ion-card-content>
+  </div>
 </ion-content>

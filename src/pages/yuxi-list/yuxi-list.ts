@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
 
 import { DataService } from "../../business-model/services/data.service";
 import { JsonProvider } from '../../commons/providers/json.provider';
+import { AuthenticationService } from "../../business-model/services/authentication.service";
 
 @IonicPage()
 @Component({
@@ -23,7 +24,8 @@ export class YuxiListPage {
       public navParams: NavParams,
       private dataService: DataService,
       private jsonProvider: JsonProvider,
-      private parentCtrl: App) 
+      private parentCtrl: App,
+      private authenticationService: AuthenticationService) 
   {
       this.messages = this.jsonProvider.messages.yuxiList;
       this.getData();
@@ -38,6 +40,10 @@ export class YuxiListPage {
 
   private itemSelected(dataSelected){
     this.parentCtrl.getRootNav().push("DetailPage", { 'dataSelected': dataSelected });
+  }
+
+  private logout(){
+    this.authenticationService.logout();
   }
 
 }

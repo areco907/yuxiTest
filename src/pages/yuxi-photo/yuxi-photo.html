@@ -11,13 +11,18 @@
 
 <ion-content>
   <div class="both-buttons">
-    <button ion-button item-left class="main-button" (click)="listPhotos()">
-      <ion-icon name="photos"></ion-icon>
-      {{messages.myPhotosButton}}
-    </button>
-    <button ion-button item-left class="secondary-button" (click)="takePic(user)">
+    <button ion-button item-left class="main-button" (click)="takePic()" *ngIf="imageTaken">
       <ion-icon name="camera"></ion-icon>
       {{messages.cameraButton}}
     </button>
   </div>
+  <div class="imageTaken">
+    <ion-item *ngIf="imageTaken">
+      <img [src]="imageTaken" >
+    </ion-item>
+    <ion-item *ngIf="!imageTaken" (click)="takePic()">
+      <img src="assets/imgs/takePhoto.jpeg" >
+    </ion-item>
+  </div>
+  
 </ion-content>

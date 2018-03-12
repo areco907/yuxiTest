@@ -38,7 +38,7 @@ export class MyApp {
 	   */
 	private getMessages(): void {
 		this.jsonProvider.getMessages().subscribe(() => {
-			this.rootPage = 'MenuTabsPage';
+			this.rootPage = 'LoginPage';
 		})
 	};
 }
